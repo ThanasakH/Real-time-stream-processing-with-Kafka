@@ -18,7 +18,7 @@ Streaming together with Spark ML / SQL to process the data streams. For part 3, 
 ## 1. Producing the data
 In this task, we will implement two Apache Kafka producers (one for process and one for memory) to simulate the real-time streaming of the data.
 
-## 1.1 Process Event Producer
+### 1.1 Process Event Producer
 Write a python program that loads all the data from “Streaming_Linux_process.csv”. Save the file as Real time stream processing with Kafka - Part 1.1 - Process Event Producer.ipynb.
 
 Your program should send X number of records from each machine following the sequence to the Kafka stream every 5 seconds.
@@ -27,7 +27,7 @@ Your program should send X number of records from each machine following the seq
 - If the data is exhausted, restart from the first sequence again
 
 
-## 1.2 Memory Event Producer
+### 1.2 Memory Event Producer
 Write a python program that loads all the data from “Streaming_Linux_memory.csv”. Save the file as Real time stream processing with Kafka - Part 1.2 - Memory Event Producer.
 
 Your program should send X number of records from each machine following the sequence to the Kafka stream every 10 seconds. Meanwhile, also generate Y number of records with the same timestamp. These Y number of records would be sent after 10 seconds (or the next cycle)2 . A figure demonstrating the timeline is shown below.
@@ -39,22 +39,22 @@ Your program should send X number of records from each machine following the seq
 <p align="center"><img src="https://user-images.githubusercontent.com/34445145/144777909-82f950b2-e7e2-4e88-8280-918a6019fb9a.png"></p>
 <p align="center">Fig 2: Timeline on the data generation and publication onto the stream</p>
 
-# 2. Consuming data using Kafka
+## 2. Consuming data using Kafka
 In this task, we will implement multiple Apache Kafka consumers to consume the data from part 1.
 
 Note:
 - In this task, use Kafka consumer to consume the data from part 1.
 - Do not use Spark in this task.
 
-## 2.1 Process Event Consumer
+### 2.1 Process Event Consumer
 Write a python program that consumes the process events using kafka consumer, visualise the record counts in real time. Save the file as “Real time stream processing with Kafka - Part 2.1 - Process Event Consumer.ipynb." and use line charts to visualise.
 
-## 2.2 Memory Event Consumer
+### 2.2 Memory Event Consumer
 Write a python program that consumes the memory events using kafka consumer, visualise the record counts in real time. Save the file as “Real time stream processing with Kafka - Part 2.2 - Memory Event Consumer.ipynb.”
  
 Your program should get the count of records arriving in the last 2 minutes (use processing time) for each machine, and use line charts to visualise.
 
-# 3. Streaming application using Spark Structured Streaming
+## 3. Streaming application using Spark Structured Streaming
 In this part, we will implement Spark Structured Streaming to consume the data from part 1 and perform predictive analytics.
 
 Note:
